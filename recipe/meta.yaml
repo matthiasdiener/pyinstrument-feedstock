@@ -1,8 +1,8 @@
 {% set name = "pyinstrument" %}
-{% set version = "0.13.2" %}
+{% set version = "2.0.2" %}
 {% set bundle = "tar.gz" %}
 {% set hash_type = "sha256" %}
-{% set hash_val = "a0a645d69df12551214311fdf2e454c12b96cb0abc0f5dcc3067d8ef71713e02" %}
+{% set hash_val = "c04f3a0771185c66db7acb92db518be3db79253aad790f7c81da57d5ed9253bd" %}
 {% set build = 0 %}
 
 package:
@@ -18,7 +18,7 @@ build:
   entry_points:
     - pyinstrument = pyinstrument.__main__:main
 
-  number: {{ build }}
+  number: 0
   script: python setup.py install --single-version-externally-managed --record=record.txt
 
 requirements:
