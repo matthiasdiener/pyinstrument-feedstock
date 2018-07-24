@@ -1,8 +1,8 @@
 {% set name = "pyinstrument" %}
-{% set version = "2.0.2" %}
+{% set version = "2.0.3" %}
 {% set bundle = "tar.gz" %}
 {% set hash_type = "sha256" %}
-{% set hash_val = "c04f3a0771185c66db7acb92db518be3db79253aad790f7c81da57d5ed9253bd" %}
+{% set hash_val = "100eed3db3e8b54ba3e175db27f92a75e8226e366f68b71612935ead49738b21" %}
 
 package:
   name: {{ name|lower }}
@@ -18,7 +18,7 @@ build:
   entry_points:
     - pyinstrument = pyinstrument.__main__:main
 
-  number: 1
+  number: 0
   script: python -m pip install --no-deps --ignore-installed .
 
 requirements:
