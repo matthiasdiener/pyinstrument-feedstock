@@ -1,8 +1,8 @@
 {% set name = "pyinstrument" %}
-{% set version = "2.0.3" %}
+{% set version = "2.1.1" %}
 {% set bundle = "tar.gz" %}
 {% set hash_type = "sha256" %}
-{% set hash_val = "100eed3db3e8b54ba3e175db27f92a75e8226e366f68b71612935ead49738b21" %}
+{% set hash_val = "b63cb9043babae952ed53558c308ff0b93f0e79f0fa49a5e6c17a5ed77061d3e" %}
 
 package:
   name: {{ name|lower }}
