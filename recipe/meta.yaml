@@ -26,6 +26,7 @@ requirements:
     - python
     - pip
     - pytest-runner
+    - node
 
   run:
     - python
