@@ -1,3 +1,5 @@
+set -x
+
 # The node from defaults is too old to work properly
 
 node install -g npm
