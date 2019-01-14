@@ -1,8 +1,8 @@
 {% set name = "pyinstrument" %}
-{% set version = "2.3.0" %}
+{% set version = "3.0.0" %}
 {% set bundle = "tar.gz" %}
 {% set hash_type = "sha256" %}
-{% set hash_val = "87bf23dd12ebd214c516ee98d2abe707401f5818aafa425d868ce63bfa7bd074" %}
+{% set hash_val = "37945d83935d57a91cea46ecf25ff63e4d4d95d63519320b7e89b3959560fcad" %}
 
 package:
   name: {{ name|lower }}
@@ -26,6 +26,7 @@ requirements:
     - python
     - pip
     - pytest-runner
+    - nodejs
 
   run:
     - python
