@@ -30,7 +30,7 @@ requirements:
 
   run:
     - python
-    - pyinstrument_cext
+    - pyinstrument_cext >=0.2.2
 
 test:
   imports:
