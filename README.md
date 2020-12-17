@@ -5,11 +5,11 @@ Home: https://github.com/joerick/pyinstrument
 
 Package license: BSD 3-Clause
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pyinstrument-feedstock/blob/master/LICENSE.txt)
 
 Summary: A call stack profiler for Python. Inspired by Apple's Instruments.app
 
-
+Development: https://github.com/joerick/pyinstrument
 
 Current build status
 ====================
