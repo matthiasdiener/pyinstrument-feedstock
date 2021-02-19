@@ -22,13 +22,13 @@ build:
 
 requirements:
   host:
-    - python
+    - python >=3.6
     - pip
     - pytest-runner
     - nodejs
 
   run:
-    - python
+    - python >=3.6
     - pyinstrument_cext >=0.2.2
 
 test:
