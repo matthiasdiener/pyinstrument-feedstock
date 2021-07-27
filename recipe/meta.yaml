@@ -1,7 +1,7 @@
 {% set name = "pyinstrument" %}
-{% set version = "3.4.2" %}
+{% set version = "4.0.2" %}
 {% set bundle = "tar.gz" %}
-{% set hash_val = "ec79f6fc6f945edd845b1c8b6470de8cb6f65a3cbb3845c533991619ffcb1636" %}
+{% set hash_val = "abdd80708f37d0d64b43133b494c773187ef0d970a8c0bce42b3e21f4701b7eb" %}
 
 package:
   name: {{ name|lower }}
@@ -13,7 +13,6 @@ source:
   sha256: {{ hash_val }}
 
 build:
-  noarch: python
   entry_points:
     - pyinstrument = pyinstrument.__main__:main
 
@@ -21,15 +20,17 @@ build:
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
+  build:
+    - {{ compiler('c') }}
   host:
-    - python >=3.6
+    - nodejs
     - pip
     - pytest-runner
-    - nodejs
+    - python
+    - setuptools
 
   run:
-    - python >=3.6
-    - pyinstrument_cext >=0.2.2
+    - python
 
 test:
   imports:
