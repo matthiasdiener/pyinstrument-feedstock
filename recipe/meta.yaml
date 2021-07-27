@@ -13,6 +13,7 @@ source:
   sha256: {{ hash_val }}
 
 build:
+  skip: True  # [py36]
   entry_points:
     - pyinstrument = pyinstrument.__main__:main
 
@@ -23,11 +24,8 @@ requirements:
   build:
     - {{ compiler('c') }}
   host:
-    - nodejs
     - pip
-    - pytest-runner
     - python
-    - setuptools
 
   run:
     - python
