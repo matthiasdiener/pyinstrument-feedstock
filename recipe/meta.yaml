@@ -13,7 +13,7 @@ source:
   sha256: {{ hash_val }}
 
 build:
-  noarch: python
+  skip: True  # [py36]
   entry_points:
     - pyinstrument = pyinstrument.__main__:main
 
@@ -21,15 +21,14 @@ build:
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
+  build:
+    - {{ compiler('c') }}
   host:
-    - python >=3.6
     - pip
-    - pytest-runner
-    - nodejs
+    - python
 
   run:
-    - python >=3.6
-    - pyinstrument_cext >=0.2.2
+    - python
 
 test:
   imports:
