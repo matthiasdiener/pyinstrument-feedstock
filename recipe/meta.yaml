@@ -1,7 +1,7 @@
 {% set name = "pyinstrument" %}
-{% set version = "4.0.3" %}
+{% set version = "4.0.4" %}
 {% set bundle = "tar.gz" %}
-{% set hash_val = "08caf41d21ae8f24afe79c664a34af1ed1e17aa5d4441cd9b1dc15f87bbbac95" %}
+{% set hash_val = "c731b31fdf9022eee0b771b509fc9f4cbe268a659d15c962832478e993aa37bc" %}
 
 package:
   name: {{ name|lower }}
@@ -13,7 +13,7 @@ source:
   sha256: {{ hash_val }}
 
 build:
-  skip: True  # [py36]
+  skip: true  # [py36]
   entry_points:
     - pyinstrument = pyinstrument.__main__:main
 
