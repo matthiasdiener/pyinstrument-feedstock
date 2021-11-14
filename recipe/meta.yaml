@@ -1,7 +1,7 @@
 {% set name = "pyinstrument" %}
-{% set version = "4.0.4" %}
+{% set version = "4.1.0" %}
 {% set bundle = "tar.gz" %}
-{% set hash_val = "c731b31fdf9022eee0b771b509fc9f4cbe268a659d15c962832478e993aa37bc" %}
+{% set hash_val = "9c770bb316fc033e7fa7f837e4f8db1db93d0fd07890e90ea628b570bf415b78" %}
 
 package:
   name: {{ name|lower }}
@@ -17,7 +17,7 @@ build:
   entry_points:
     - pyinstrument = pyinstrument.__main__:main
 
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
