@@ -216,5 +216,4 @@ Feedstock Maintainers
 
 * [@asmeurer](https://github.com/asmeurer/)
 * [@moorepants](https://github.com/moorepants/)
-* [@pmlandwehr](https://github.com/pmlandwehr/)
 
