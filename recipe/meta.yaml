@@ -24,17 +24,18 @@ requirements:
   build:
     - {{ compiler('c') }}
   host:
-    - pip
     - python
-
+    - pip
   run:
     - python
 
 test:
   imports:
     - pyinstrument
-
+  requires:
+    - pip
   commands:
+    - pip check
     - pyinstrument --help
 
 about:
