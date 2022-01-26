@@ -13,16 +13,18 @@ source:
   sha256: {{ hash_val }}
 
 build:
-  skip: true  # [py36]
+  skip: true  # [py==36]
   entry_points:
     - pyinstrument = pyinstrument.__main__:main
 
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   build:
     - {{ compiler('c') }}
+    - python                                 # [build_platform != target_platform]
+    - cross-python_{{ target_platform }}     # [build_platform != target_platform]
   host:
     - python
     - pip
@@ -45,8 +47,10 @@ about:
   license_family: BSD
   summary: A call stack profiler for Python. Inspired by Apple's Instruments.app
   dev_url: https://github.com/joerick/pyinstrument
+  doc_url: https://pyinstrument.readthedocs.io/
 
 extra:
   recipe-maintainers:
     - moorepants
     - asmeurer
+    - matthiasdiener
