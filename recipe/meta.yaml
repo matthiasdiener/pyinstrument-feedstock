@@ -13,7 +13,7 @@ source:
   sha256: {{ hash_val }}
 
 build:
-  skip: true  # [py==36]
+  skip: true  # [python_impl=='pypy']
   entry_points:
     - pyinstrument = pyinstrument.__main__:main
 
